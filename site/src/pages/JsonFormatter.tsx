@@ -196,7 +196,7 @@ export default function JsonFormatter() {
     try {
       const Ajv = (await import('ajv')).default
       const ajv = new Ajv({ allErrors: true, strict: false })
-      const validate = ajv.compile(parsedSchema.value)
+      const validate = ajv.compile(parsedSchema.value as any)
       const valid = validate(parsedData.value)
       if (valid) {
         message.success('Schema 验证通过')
