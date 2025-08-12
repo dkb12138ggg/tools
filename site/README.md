@@ -2,6 +2,8 @@
 
 > 一个简洁、隐私优先的在线工具集合网站，所有数据处理均在浏览器本地完成，无需登录。
 
+[中文](README.md) | [English](README_EN.md)
+
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19.1-blue)](https://reactjs.org/)
