@@ -5,12 +5,12 @@ export function positionToLineCol(text: string, pos: number) {
   return { line, col }
 }
 
-export function safeParseJson(input: string): { ok: true; value: any } | { ok: false; error: string; line?: number; col?: number; pos?: number } {
+export function safeParseJson(input: string): { ok: true; value: unknown } | { ok: false; error: string; line?: number; col?: number; pos?: number } {
   try {
     const value = JSON.parse(input)
     return { ok: true, value }
-  } catch (e: any) {
-    const msg = String(e?.message || e)
+  } catch (e: unknown) {
+    const msg = String(e instanceof Error ? e.message : e)
     const match = msg.match(/position (\d+)/)
     if (match) {
       const pos = Number(match[1])
